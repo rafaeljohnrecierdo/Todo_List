@@ -1,15 +1,13 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
-const Task = {} => {
+const Task = () => {
 
-  return {
+  return (
     <View>
-      <Text>This is the task</Text>
+      <Text> This is the task </Text>
     </View>
-
-  }
-
+  )
 }
 
 const styles = StyleSheet.create ({
