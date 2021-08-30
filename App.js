@@ -11,11 +11,8 @@ export default function App() {
         <Text style={styles.sectionTitle}>Today's Task </Text>
 
         <View style={styles.items}>
-        <Task />
-        <Task />
-        <Task />
-        <Task />
-        <Task />
+        <Task text={'Task 1'}/>
+        <Task text={'Task 2'}/>
 
         </View>
 
