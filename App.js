@@ -5,8 +5,16 @@ import { StyleSheet, Text, View } from 'react-native';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Hello World</Text>
-      <StatusBar style="auto" />
+
+      <View style={styles.tasksWrapper}>
+        <Text style={styles.sectionTitle}>Today's Task </Text>
+
+        <View style={styles.items}>
+        
+        </View>
+
+      </View>
+
     </View>
   );
 }
@@ -15,7 +23,10 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
   },
+  tasksWrapper: {},
+  sectionTitle: {},
+  items: {}
+
+
 });
