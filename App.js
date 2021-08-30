@@ -4,10 +4,12 @@ import { KeyboardAvoidingView, StyleSheet, Text, View, TextInput, TouchableOpaci
 import Task from './components/Task';
 
 export default function App() {
-  const[task, setTask] = useState();
+  const [task, setTask] = useState();
+  const [taskItems, setTaskItems] = useState([]);
 
   const handleAddTask = () => {
-    console.log(task);
+    setTaskItems([...taskItems, task])
+    setTask(null);
   }
 
 
@@ -18,8 +20,11 @@ export default function App() {
         <Text style={styles.sectionTitle}>Today's Task </Text>
 
         <View style={styles.items}>
-        <Task text={'Task 1'}/>
-        <Task text={'Task 2'}/>
+        {
+          taskItems.map((item) => {
+            <Task text={item}/>
+          })
+        }
 
         </View>
 
