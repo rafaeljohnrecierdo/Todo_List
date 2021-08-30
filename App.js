@@ -25,7 +25,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#99B4B9',
+    backgroundColor: '#62A7B3',
   },
   tasksWrapper: {
     paddingTop: 80,
