@@ -1,9 +1,16 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
+import React, { useState } from 'react';
 import { KeyboardAvoidingView, StyleSheet, Text, View, TextInput, TouchableOpacity} from 'react-native';
 import Task from './components/Task';
 
 export default function App() {
+  const[task, setTask] = useState();
+
+  const handleAddTask = () => {
+    console.log(task);
+  }
+
+
   return (
     <View style={styles.container}>
 
