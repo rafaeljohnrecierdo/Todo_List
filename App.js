@@ -8,10 +8,16 @@ export default function App() {
   const [taskItems, setTaskItems] = useState([]);
 
   const handleAddTask = () => {
+    keyboard.dismiss();
     setTaskItems([...taskItems, task])
     setTask(null);
   }
 
+  const completeTask = (index) => {
+    let itemsCopy = [...taskItems];
+    itemsCopy.splice(index, 1);
+    setTaskItems(itemsCopy);
+  }
 
   return (
     <View style={styles.container}>
@@ -21,8 +27,8 @@ export default function App() {
 
         <View style={styles.items}>
         {
-          taskItems.map((item) => {
-            <Task text={item}/>
+          taskItems.map((item, index) => {
+            return <Task key={index} text={item}/>
           })
         }
 
